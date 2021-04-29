@@ -1,0 +1,9 @@
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Negocio.dll
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Negocio.pdb
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Dominio.dll
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Dominio.pdb
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.dll
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.pdb

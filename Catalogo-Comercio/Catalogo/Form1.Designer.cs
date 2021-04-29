@@ -29,23 +29,23 @@ namespace Catalogo
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.LblFiltrar = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
             this.btnAgregarArticulos = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvArticulo
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 63);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(619, 305);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvArticulo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvArticulo.Location = new System.Drawing.Point(12, 63);
+            this.dgvArticulo.Name = "dgvArticulo";
+            this.dgvArticulo.Size = new System.Drawing.Size(619, 305);
+            this.dgvArticulo.TabIndex = 0;
             // 
             // LblFiltrar
             // 
@@ -113,10 +113,11 @@ namespace Catalogo
             this.Controls.Add(this.btnAgregarArticulos);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.LblFiltrar);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvArticulo);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,7 +125,7 @@ namespace Catalogo
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvArticulo;
         private System.Windows.Forms.Label LblFiltrar;
         private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btnAgregarArticulos;

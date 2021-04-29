@@ -8,3 +8,18 @@ C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\obj
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.csproj.CoreCompileInputs.cache
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.exe
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.pdb
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.csprojAssemblyReference.cache
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.Form1.resources
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.Properties.Resources.resources
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.csproj.GenerateResource.cache
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.csproj.CoreCompileInputs.cache
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.exe
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.pdb
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Catalogo.exe.config
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Catalogo.exe
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Catalogo.pdb
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Dominio.dll
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Negocio.dll
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Dominio.pdb
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Negocio.pdb
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.csproj.CopyComplete
