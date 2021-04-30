@@ -12,10 +12,10 @@ namespace Dominio
         public string Codigo { get; set; }
         public string Nombre { get; set; }
         public string Descripcion { get; set; }
-        public Decimal Precio { get; set; }
+        public int Precio { get; set; }
         public string ImagenUrl { get; set; }///URL de imagen 
-        //public string Marca { get; set; }
-        //public string Categoria { get; set; }
+        public Marcas Marca { get; set; }
+        public Categorias Categoria { get; set; }
 
     }
 }

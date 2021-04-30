@@ -34,15 +34,17 @@ namespace Catalogo
                 dgvArticulo.DataSource = ListaArticulos;
                 //oculto columnas que no quiero
                 //Puedo poner e indice de la columna o el nombre de la propiedad
-                dgvArticulo.Columns["Id"].Visible = true;
+
+                dgvArticulo.Columns["Id"].Visible = false;
+                dgvArticulo.Columns["Categoria"].Visible = false;
                 dgvArticulo.Columns["Codigo"].Visible = true;
                 dgvArticulo.Columns["Nombre"].Visible = true;
                 dgvArticulo.Columns["Descripcion"].Visible = true;
-                dgvArticulo.Columns["Precio"].Visible = true;
+                dgvArticulo.Columns["Marca"].Visible = true;
+                dgvArticulo.Columns["Precio"].Visible = false;
                 dgvArticulo.Columns["ImagenUrl"].Visible = true;
 
-                
-                //RecargarImg(ListaArticulos[0].ImagenUrl);
+                RecargarImg(ListaArticulos[0].ImagenUrl);
             }
             catch (Exception ex)
             {
@@ -51,9 +53,22 @@ namespace Catalogo
             }
         }
 
-        private void RecargarImg(string ing)
+        private void RecargarImg(string img)
         {
-            // ACA VA EL PRINT BOX DE LA IMAGEN
+            PbxImagen.Load(img);
+        }
+
+        private void dgvArticulo_MouseClick(object sender, MouseEventArgs e)
+        {
+            Articulo seleccionado = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            RecargarImg(seleccionado.ImagenUrl);
+        }
+
+        private void btnAgregarArticulos_Click(object sender, EventArgs e)
+        {
+            FrmAgregarNuevo agregar = new FrmAgregarNuevo();
+            agregar.ShowDialog();
+            CargaArticulo();
         }
     }
 }

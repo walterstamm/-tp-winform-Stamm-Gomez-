@@ -23,3 +23,4 @@ D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Negocio.dll
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Dominio.pdb
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\bin\Debug\Negocio.pdb
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.csproj.CopyComplete
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.FrmAgregarNuevo.resources

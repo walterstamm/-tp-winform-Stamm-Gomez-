@@ -29,6 +29,7 @@ namespace Catalogo
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.LblFiltrar = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -36,7 +37,9 @@ namespace Catalogo
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
+            this.PbxImagen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvArticulo
@@ -46,6 +49,7 @@ namespace Catalogo
             this.dgvArticulo.Name = "dgvArticulo";
             this.dgvArticulo.Size = new System.Drawing.Size(619, 305);
             this.dgvArticulo.TabIndex = 0;
+            this.dgvArticulo.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArticulo_MouseClick);
             // 
             // LblFiltrar
             // 
@@ -59,24 +63,28 @@ namespace Catalogo
             // listView1
             // 
             this.listView1.HideSelection = false;
+            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem5});
             this.listView1.Location = new System.Drawing.Point(66, 26);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(235, 27);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.View = System.Windows.Forms.View.List;
             // 
             // btnAgregarArticulos
             // 
-            this.btnAgregarArticulos.Location = new System.Drawing.Point(649, 84);
+            this.btnAgregarArticulos.Location = new System.Drawing.Point(15, 386);
             this.btnAgregarArticulos.Name = "btnAgregarArticulos";
             this.btnAgregarArticulos.Size = new System.Drawing.Size(127, 34);
             this.btnAgregarArticulos.TabIndex = 3;
             this.btnAgregarArticulos.Text = "Agregar Articulos";
             this.btnAgregarArticulos.UseVisualStyleBackColor = true;
+            this.btnAgregarArticulos.Click += new System.EventHandler(this.btnAgregarArticulos_Click);
             // 
             // btnModificarArticulo
             // 
-            this.btnModificarArticulo.Location = new System.Drawing.Point(649, 142);
+            this.btnModificarArticulo.Location = new System.Drawing.Point(174, 386);
             this.btnModificarArticulo.Name = "btnModificarArticulo";
             this.btnModificarArticulo.Size = new System.Drawing.Size(127, 34);
             this.btnModificarArticulo.TabIndex = 4;
@@ -85,7 +93,7 @@ namespace Catalogo
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(649, 206);
+            this.btnEliminar.Location = new System.Drawing.Point(347, 386);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(127, 34);
             this.btnEliminar.TabIndex = 5;
@@ -94,19 +102,29 @@ namespace Catalogo
             // 
             // btnDetalles
             // 
-            this.btnDetalles.Location = new System.Drawing.Point(649, 267);
+            this.btnDetalles.Location = new System.Drawing.Point(504, 386);
             this.btnDetalles.Name = "btnDetalles";
             this.btnDetalles.Size = new System.Drawing.Size(127, 34);
             this.btnDetalles.TabIndex = 6;
             this.btnDetalles.Text = "Detalles";
             this.btnDetalles.UseVisualStyleBackColor = true;
             // 
+            // PbxImagen
+            // 
+            this.PbxImagen.Location = new System.Drawing.Point(682, 63);
+            this.PbxImagen.Name = "PbxImagen";
+            this.PbxImagen.Size = new System.Drawing.Size(263, 319);
+            this.PbxImagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PbxImagen.TabIndex = 7;
+            this.PbxImagen.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(957, 450);
+            this.Controls.Add(this.PbxImagen);
             this.Controls.Add(this.btnDetalles);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificarArticulo);
@@ -118,6 +136,7 @@ namespace Catalogo
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -132,6 +151,7 @@ namespace Catalogo
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalles;
+        private System.Windows.Forms.PictureBox PbxImagen;
     }
 }
 
