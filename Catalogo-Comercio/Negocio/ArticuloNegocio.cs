@@ -16,8 +16,6 @@ namespace Negocio
             SqlConnection conexion = new SqlConnection();
             SqlCommand comando = new SqlCommand();
             SqlDataReader lector;
-            
-
             try
             {
                 conexion.ConnectionString = "data source=.\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
@@ -29,9 +27,6 @@ namespace Negocio
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-
-                    
-                    
                     aux.Categoria = new Categorias((string)lector["Categoria"]);
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
@@ -39,15 +34,12 @@ namespace Negocio
                     //aux.Precio = (int)lector["Precio"];
                     aux.Marca = new Marcas((string)lector["Marca"]);
                     aux.ImagenUrl = (string)lector["ImagenUrl"];
-
-
                     lista.Add(aux);
                 }
                 return lista;
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
         }
