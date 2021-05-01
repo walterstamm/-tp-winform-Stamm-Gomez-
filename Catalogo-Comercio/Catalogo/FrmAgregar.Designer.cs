@@ -122,8 +122,8 @@ namespace Catalogo
             this.TxbPrecio.Name = "TxbPrecio";
             this.TxbPrecio.Size = new System.Drawing.Size(126, 26);
             this.TxbPrecio.TabIndex = 7;
+            this.TxbPrecio.Text = "0.00";
             this.TxbPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.TxbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxbPrecio_KeyPress);
             // 
             // label5
             // 

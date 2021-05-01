@@ -29,7 +29,7 @@ namespace Catalogo
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.dgvArticulo = new System.Windows.Forms.DataGridView();
             this.LblFiltrar = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -38,6 +38,7 @@ namespace Catalogo
             this.btnEliminar = new System.Windows.Forms.Button();
             this.btnDetalles = new System.Windows.Forms.Button();
             this.PbxImagen = new System.Windows.Forms.PictureBox();
+            this.BtnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PbxImagen)).BeginInit();
             this.SuspendLayout();
@@ -54,9 +55,10 @@ namespace Catalogo
             // LblFiltrar
             // 
             this.LblFiltrar.AutoSize = true;
-            this.LblFiltrar.Location = new System.Drawing.Point(12, 26);
+            this.LblFiltrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblFiltrar.Location = new System.Drawing.Point(11, 9);
             this.LblFiltrar.Name = "LblFiltrar";
-            this.LblFiltrar.Size = new System.Drawing.Size(32, 13);
+            this.LblFiltrar.Size = new System.Drawing.Size(56, 20);
             this.LblFiltrar.TabIndex = 1;
             this.LblFiltrar.Text = "Filtrar";
             // 
@@ -64,10 +66,10 @@ namespace Catalogo
             // 
             this.listView1.HideSelection = false;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem5});
-            this.listView1.Location = new System.Drawing.Point(66, 26);
+            listViewItem1});
+            this.listView1.Location = new System.Drawing.Point(82, 12);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(235, 27);
+            this.listView1.Size = new System.Drawing.Size(235, 31);
             this.listView1.TabIndex = 2;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.List;
@@ -118,12 +120,23 @@ namespace Catalogo
             this.PbxImagen.TabIndex = 7;
             this.PbxImagen.TabStop = false;
             // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.Location = new System.Drawing.Point(369, 12);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(118, 31);
+            this.BtnBuscar.TabIndex = 8;
+            this.BtnBuscar.Text = "Buscar";
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(957, 450);
+            this.Controls.Add(this.BtnBuscar);
             this.Controls.Add(this.PbxImagen);
             this.Controls.Add(this.btnDetalles);
             this.Controls.Add(this.btnEliminar);
@@ -152,6 +165,7 @@ namespace Catalogo
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnDetalles;
         private System.Windows.Forms.PictureBox PbxImagen;
+        private System.Windows.Forms.Button BtnBuscar;
     }
 }
 

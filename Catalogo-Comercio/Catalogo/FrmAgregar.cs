@@ -40,12 +40,12 @@ namespace Catalogo
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
-                nuevo.Categoria = (Categorias)CboCategoria.SelectedItem;
                 nuevo.Codigo = TxbCodigo.Text;
                 nuevo.Nombre = TxbNombre.Text;
                 nuevo.Descripcion = TxbDescripcion.Text;
-                //nuevo.Precio = TxbPrecio.values;
+                nuevo.Precio = Decimal.Parse(TxbPrecio.Text);
                 nuevo.Marca = (Marcas)CboMarcas.SelectedItem;
+                nuevo.Categoria = (Categorias)CboCategoria.SelectedItem;
                 nuevo.ImagenUrl = TxbImagenUrl.Text;
 
                 articuloNegocio.agregar(nuevo);
@@ -57,14 +57,6 @@ namespace Catalogo
 
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-        private void TxbPrecio_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar > 0){
-                e.Handled = true;
-            }
-                
         }
     }
 }

@@ -20,20 +20,22 @@ namespace Negocio
             {
                 conexion.ConnectionString = "data source=.\\SQLEXPRESS; initial catalog=CATALOGO_DB; integrated security=sspi";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select isnull(C.Descripcion, 0) as Categoria, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion as Marca, A.Precio, A.ImagenUrl from ARTICULOS A full join MARCAS M on A.IdMarca = M.Id full join CATEGORIAS C on A.IdCategoria = C.Id where A.Id is not null";
+                comando.CommandText = "select A.Codigo, A.Nombre, A.Descripcion, A.Precio, M.Descripcion as Marca, isnull(C.Descripcion, 0) as Categoria, A.ImagenUrl  from ARTICULOS A full join MARCAS M on A.IdMarca = M.Id full join CATEGORIAS C on A.IdCategoria = C.Id where A.Id is not null";
                 comando.Connection = conexion;
                 conexion.Open();
                 lector = comando.ExecuteReader();
                 while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                    aux.Categoria = new Categorias((string)lector["Categoria"]);
+
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
-                    //aux.Precio = (int)lector["Precio"];
+                    aux.Precio = (Decimal)lector["Precio"];
                     aux.Marca = new Marcas((string)lector["Marca"]);
+                    aux.Categoria = new Categorias((string)lector["Categoria"]);
                     aux.ImagenUrl = (string)lector["ImagenUrl"];
+
                     lista.Add(aux);
                 }
                 return lista;
@@ -49,7 +51,7 @@ namespace Negocio
             AccesoDatos datos = new AccesoDatos();
             try
             {
-                string valores = "values ('" + nuevo.Codigo + "' , '" + nuevo.Nombre + " ', '" + nuevo.Descripcion + " ', "+ nuevo.Marca.Id +", " +nuevo.Categoria.Id+ ", '" +nuevo.ImagenUrl+ " ', 0.00)";
+                string valores = "values ('" + nuevo.Codigo + "' , '" + nuevo.Nombre + " ', '" + nuevo.Descripcion + " ', "+ nuevo.Marca.Id +", " +nuevo.Categoria.Id+ ", '" +nuevo.ImagenUrl+ " ', " +nuevo.Precio + ")";
                 datos.setearConsulta("insert into ARTICULOS (Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, Precio) " + valores);
 
                 datos.ejectutarAccion();

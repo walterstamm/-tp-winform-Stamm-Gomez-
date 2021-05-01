@@ -32,16 +32,16 @@ namespace Catalogo
             {
                 ListaArticulos = articuloNegocio.lista();
                 dgvArticulo.DataSource = ListaArticulos;
-                //oculto columnas que no quiero
+                //oculto columnas que no quiero = false
                 //Puedo poner e indice de la columna o el nombre de la propiedad
 
                 dgvArticulo.Columns["Id"].Visible = false;
-                dgvArticulo.Columns["Categoria"].Visible = false;
                 dgvArticulo.Columns["Codigo"].Visible = true;
                 dgvArticulo.Columns["Nombre"].Visible = true;
                 dgvArticulo.Columns["Descripcion"].Visible = true;
+                dgvArticulo.Columns["Precio"].Visible = true;
                 dgvArticulo.Columns["Marca"].Visible = true;
-                dgvArticulo.Columns["Precio"].Visible = false;
+                dgvArticulo.Columns["Categoria"].Visible = true;
                 dgvArticulo.Columns["ImagenUrl"].Visible = true;
 
                 RecargarImg(ListaArticulos[0].ImagenUrl);
