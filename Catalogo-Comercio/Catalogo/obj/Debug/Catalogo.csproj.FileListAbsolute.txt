@@ -31,3 +31,4 @@ C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\bin
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.FrmAgregarNuevo.resources
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.csproj.CopyComplete
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.FmrModificar.resources
+D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Catalogo\obj\Debug\Catalogo.FmrModificar.resources

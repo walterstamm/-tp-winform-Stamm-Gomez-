@@ -57,7 +57,6 @@ namespace Catalogo
             this.lblCodigo.Size = new System.Drawing.Size(40, 13);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Codigo";
-            this.lblCodigo.Click += new System.EventHandler(this.label1_Click);
             // 
             // lblNombre
             // 
@@ -151,7 +150,6 @@ namespace Catalogo
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(164, 20);
             this.txtDescripcion.TabIndex = 11;
-            this.txtDescripcion.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // txtUrlImagen
             // 

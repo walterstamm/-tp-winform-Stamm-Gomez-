@@ -16,10 +16,7 @@ namespace Catalogo
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -73,16 +70,6 @@ namespace Catalogo
 
                 MessageBox.Show(ex.Message);
             }
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox4_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
