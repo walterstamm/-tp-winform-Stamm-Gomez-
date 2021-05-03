@@ -4,3 +4,9 @@ D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.cspr
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.dll
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.pdb
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Dominio\bin\Debug\Dominio.dll
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.dll
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Dominio\obj\Debug\Dominio.pdb

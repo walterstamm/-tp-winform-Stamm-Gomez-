@@ -7,3 +7,12 @@ D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.cspr
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.dll
 D:\GITHUB 2021\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.pdb
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Negocio.dll
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Negocio.pdb
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Dominio.dll
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\bin\Debug\Dominio.pdb
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.dll
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\Negocio\obj\Debug\Negocio.pdb

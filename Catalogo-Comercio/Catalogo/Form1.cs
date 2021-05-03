@@ -36,13 +36,13 @@ namespace Catalogo
                 //Puedo poner e indice de la columna o el nombre de la propiedad
 
                 dgvArticulo.Columns["Id"].Visible = false;
-                dgvArticulo.Columns["Codigo"].Visible = true;
+                dgvArticulo.Columns["Codigo"].Visible = false;
                 dgvArticulo.Columns["Nombre"].Visible = true;
                 dgvArticulo.Columns["Descripcion"].Visible = true;
                 dgvArticulo.Columns["Precio"].Visible = true;
                 dgvArticulo.Columns["Marca"].Visible = true;
                 dgvArticulo.Columns["Categoria"].Visible = true;
-                dgvArticulo.Columns["ImagenUrl"].Visible = true;
+                dgvArticulo.Columns["ImagenUrl"].Visible = false;
 
                 RecargarImg(ListaArticulos[0].ImagenUrl);
             }
@@ -53,9 +53,45 @@ namespace Catalogo
             }
         }
 
+        private void CargaArticulo(List <Articulo> lista)
+        {
+            try
+            {
+                dgvArticulo.DataSource = lista;
+                //oculto columnas que no quiero = false
+                //Puedo poner e indice de la columna o el nombre de la propiedad
+
+                dgvArticulo.Columns["Id"].Visible = false;
+                dgvArticulo.Columns["Codigo"].Visible = false;
+                dgvArticulo.Columns["Nombre"].Visible = true;
+                dgvArticulo.Columns["Descripcion"].Visible = true;
+                dgvArticulo.Columns["Precio"].Visible = true;
+                dgvArticulo.Columns["Marca"].Visible = true;
+                dgvArticulo.Columns["Categoria"].Visible = true;
+                dgvArticulo.Columns["ImagenUrl"].Visible = false;
+
+                
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message.ToString());
+            }
+        }
+
+
+
         private void RecargarImg(string img)
         {
-            PbxImagen.Load(img);
+            try
+            {
+                PbxImagen.Load(img);
+            }
+            catch (Exception )
+            {
+                MessageBox.Show("URL invalida");
+            
+            } 
         }
 
         private void dgvArticulo_MouseClick(object sender, MouseEventArgs e)
@@ -69,6 +105,66 @@ namespace Catalogo
             FrmAgregarNuevo agregar = new FrmAgregarNuevo();
             agregar.ShowDialog();
             CargaArticulo();
+        }
+
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            Articulo auxiliar = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            FmrModificar Modificar = new FmrModificar(auxiliar);
+            Modificar.ShowDialog();
+            CargaArticulo();
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            Articulo aux = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            ArticuloNegocio negocio = new ArticuloNegocio();
+            try
+            {
+                if(MessageBox.Show("Seguro que quiere eliminar el Articulo","Eliminar" ,MessageBoxButtons.YesNo,MessageBoxIcon.Question)==DialogResult.Yes)
+                {
+                    negocio.Eliminar(aux.Id);
+                    MessageBox.Show("Eliminado Correctamente");
+                    CargaArticulo();
+                }
+                    
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            if (txtFiltro.Text.Length >= 3)
+            {
+                List<Articulo> listaFiltrada = ListaArticulos.FindAll(X => X.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Descripcion.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Codigo.ToUpper().Contains(txtFiltro.Text.ToUpper()));
+
+                CargaArticulo(listaFiltrada);
+            }
+            else
+            {
+                CargaArticulo();
+
+            }
+        }
+
+        private void txtFiltro_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (txtFiltro.Text.Length >= 3)
+            {
+                List<Articulo> listaFiltrada = ListaArticulos.FindAll(X => X.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Descripcion.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Codigo.ToUpper().Contains(txtFiltro.Text.ToUpper()));
+               
+                CargaArticulo(listaFiltrada);
+            }
+            else
+            {
+                CargaArticulo();
+               
+            }
         }
     }
 }

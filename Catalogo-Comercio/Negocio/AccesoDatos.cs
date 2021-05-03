@@ -5,6 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 
+
+
+
 namespace Negocio
 {
     class AccesoDatos
@@ -38,6 +41,11 @@ namespace Negocio
                 lector.Close();
             conexion.Close();
         }
+        public void setearParametro(string nombre,object valor)
+        {
+            comando.Parameters.AddWithValue(nombre, valor);
+        }
+
 
         public SqlDataReader Lector
         {
