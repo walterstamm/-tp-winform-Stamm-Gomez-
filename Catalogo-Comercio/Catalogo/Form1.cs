@@ -167,5 +167,14 @@ namespace Catalogo
                
             }
         }
+
+        private void btnDetalles_Click(object sender, EventArgs e)
+        {
+            Articulo auxiliar = (Articulo)dgvArticulo.CurrentRow.DataBoundItem;
+            FmrModificar Modificar = new FmrModificar(auxiliar, true);
+            Modificar.ShowDialog();
+            CargaArticulo();
+
+        }
     }
 }

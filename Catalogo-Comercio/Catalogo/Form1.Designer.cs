@@ -102,6 +102,7 @@ namespace Catalogo
             this.btnDetalles.TabIndex = 6;
             this.btnDetalles.Text = "Detalles";
             this.btnDetalles.UseVisualStyleBackColor = true;
+            this.btnDetalles.Click += new System.EventHandler(this.btnDetalles_Click);
             // 
             // PbxImagen
             // 

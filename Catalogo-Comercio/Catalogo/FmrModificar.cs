@@ -6,7 +6,8 @@ namespace Catalogo
 {
     public partial class FmrModificar : Form
     {
-        private Articulo ArtAuxiliar = null;
+        private Articulo ArtAuxiliar;
+        private bool Detalle = false;
        
         public FmrModificar(Articulo articulo)
         {
@@ -16,6 +17,15 @@ namespace Catalogo
 
         }
 
+
+        public FmrModificar(Articulo articulo,bool detalle)
+        {
+            InitializeComponent();
+            this.ArtAuxiliar = articulo;
+            Text = "Detalle del Articulo";
+            this.Detalle=detalle;
+
+        }
 
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -43,6 +53,7 @@ namespace Catalogo
 
             try
             {
+
                 cbCategoria.DataSource = categoriasNegocio.listar();
                 cbCategoria.ValueMember = "Id";
                 cbCategoria.DisplayMember = "Descripcion";
@@ -51,20 +62,18 @@ namespace Catalogo
                 cbMarca.ValueMember = "Id";
                 cbMarca.DisplayMember = "Descripcion";
 
-                if (ArtAuxiliar != null)
-                {
-                    txtCodigo.Text = ArtAuxiliar.Codigo;
-                    txtNombre.Text = ArtAuxiliar.Nombre;
-                    txtDescripcion.Text = ArtAuxiliar.Descripcion;
-                    txtprecio.Text = (string)ArtAuxiliar.Precio.ToString();
-                    txtUrlImagen.Text = ArtAuxiliar.ImagenUrl;
-                    cbCategoria.SelectedValue = ArtAuxiliar.Categoria.Id;
-                    cbMarca.SelectedValue = ArtAuxiliar.Marca.Id;
-                    RecargarImg(ArtAuxiliar.ImagenUrl);
-
-                }
-
+                txtCodigo.Text = ArtAuxiliar.Codigo;
+                txtNombre.Text = ArtAuxiliar.Nombre;
+                txtDescripcion.Text = ArtAuxiliar.Descripcion;
+                txtprecio.Text = (string)ArtAuxiliar.Precio.ToString();
+                txtUrlImagen.Text = ArtAuxiliar.ImagenUrl;
+                cbCategoria.SelectedValue = ArtAuxiliar.Categoria.Id;
+                cbMarca.SelectedValue = ArtAuxiliar.Marca.Id;
+                RecargarImg(ArtAuxiliar.ImagenUrl);
+                ActivarDesactivar();
             }
+
+
             catch (Exception ex)
             {
 
@@ -99,6 +108,13 @@ namespace Catalogo
         private void txtUrlImagen_TextChanged(object sender, EventArgs e)
         {
             RecargarImg(txtUrlImagen.Text);
+        }
+
+        private void ActivarDesactivar()
+        {
+            btnAceptar.Visible = !Detalle;
+            btnCancelar.Visible = !Detalle;
+            gbDetalle.Enabled = !Detalle;
         }
     }
 }
