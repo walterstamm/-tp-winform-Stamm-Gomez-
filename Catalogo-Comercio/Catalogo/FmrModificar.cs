@@ -7,7 +7,10 @@ namespace Catalogo
     public partial class FmrModificar : Form
     {
         private Articulo ArtAuxiliar;
+<<<<<<< Updated upstream
         private bool Detalle = false;
+=======
+>>>>>>> Stashed changes
        
         public FmrModificar(Articulo articulo)
         {
