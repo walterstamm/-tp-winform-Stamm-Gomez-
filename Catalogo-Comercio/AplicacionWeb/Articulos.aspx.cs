@@ -11,14 +11,14 @@ namespace AplicacionWeb
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
+        public List<Articulo> lista;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
-                dgvArticulos.DataSource = negocio.lista();
-                dgvArticulos.DataBind();
+                lista = negocio.lista();
 
             }
             catch (Exception ex)
