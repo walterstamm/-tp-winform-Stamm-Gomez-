@@ -13,8 +13,11 @@ namespace AplicacionWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            ArticuloNegocio negocio = new ArticuloNegocio();
+
             try
             {
+                   
 
             }
             catch (Exception ex)

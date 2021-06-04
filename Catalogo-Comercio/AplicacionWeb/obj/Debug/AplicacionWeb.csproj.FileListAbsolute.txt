@@ -72,3 +72,7 @@ C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWe
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWeb\obj\Debug\AplicacionWeb.csproj.CopyComplete
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWeb\obj\Debug\AplicacionWeb.dll
 C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWeb\obj\Debug\AplicacionWeb.pdb
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWeb\bin\Dominio.dll
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWeb\bin\Negocio.dll
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWeb\bin\Dominio.pdb
+C:\Users\Walter\Documents\GitHub\GestionArticulos\Catalogo-Comercio\AplicacionWeb\bin\Negocio.pdb
