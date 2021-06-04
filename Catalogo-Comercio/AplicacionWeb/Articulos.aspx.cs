@@ -17,7 +17,8 @@ namespace AplicacionWeb
 
             try
             {
-                   
+                dgvArticulos.DataSource = negocio.lista();
+                dgvArticulos.DataBind();
 
             }
             catch (Exception ex)
