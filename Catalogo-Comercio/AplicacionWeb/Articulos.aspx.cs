@@ -20,9 +20,15 @@ namespace AplicacionWeb
             {
                 lista = negocio.lista();
 
+                //Session.Add("Nombress", "Exitos");
+                //Session["Nombress"] = "Victorias";
+
+                Session.Add("listaSeleccionado", lista);
+
             }
             catch (Exception ex)
             {
+                Session.Add("Error", ex.ToString());
 
                 Response.Redirect("Error.aspx");
 
