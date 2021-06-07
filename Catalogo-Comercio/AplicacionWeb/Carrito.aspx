@@ -7,31 +7,31 @@
         
     <table>
         <tr>
-            <td style="white-space: 90px"> <h5>PRODUCTO</h5>    
+            <td> <h5>PRODUCTO</h5>    
             </td>
-            <td style="white-space: 90px"> <h5>PRECIO</h5> 
+            <td> <h5>PRECIO</h5> 
             </td>  
-            <td style="white-space: 110px">  <h5>STOCK</h5>
+            <td>  <h5>STOCK</h5>
             </td>  
-            <td style="white-space: 70px"> <h5>IMAGEN</h5>
+            <td> <h5>IMAGEN</h5>
             </td>  
         </tr>
 
-        <% foreach (Dominio.Articulo item in Carrito)
+        <% foreach (Dominio.Articulo item in carrito)
             {%>
 
         <tr>
-            <td style="white-space: 90px">
-                <asp:Label Text="text" ID="lblSeleccionado" runat="server" />
+            <td>
+                <% = item.Nombre %>                
             </td>
-            <td style="white-space: 90px">
-                <asp:Label Text="text" ID="lblPrecio" runat="server" />
+            <td>
+                <% = item.Precio %>
             </td>
-            <td style="white-space: 110px">    
-                <asp:Label Text="text" ID="lblStock" runat="server" />
+            <td>    
+                <% = "Disponible" %>                
             </td>
-            <td style="color:blue">    
-                <asp:Label  Text="text" ID="lblUrlImagen" runat="server" />
+            <td style="color:blue">
+                <% = item.ImagenUrl %>                
             </td>
         </tr>
         <%} %>

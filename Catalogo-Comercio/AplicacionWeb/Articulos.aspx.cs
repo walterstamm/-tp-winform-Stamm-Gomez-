@@ -11,19 +11,19 @@ namespace AplicacionWeb
 {
     public partial class WebForm1 : System.Web.UI.Page
     {
-        public List<Articulo> lista;
+        public List<Articulo> listas;
         protected void Page_Load(object sender, EventArgs e)
         {
             ArticuloNegocio negocio = new ArticuloNegocio();
 
             try
             {
-                lista = negocio.lista();
+                listas = negocio.lista();// trae lo de la base de dato y lo carga ahi
 
                 //Session.Add("Nombress", "Exitos");
                 //Session["Nombress"] = "Victorias";
 
-                Session.Add("listaSeleccionado", lista);
+                Session.Add("listaSeleccionado", listas);
 
             }
             catch (Exception ex)
