@@ -25,13 +25,16 @@
                 <% = item.Nombre %>                
             </td>
             <td>
-                <% = item.Precio %>
+                <% = "$ " + item.Precio.ToString("0.00") %>
             </td>
             <td>    
                 <% = "Disponible" %>                
             </td>
             <td style="color:blue">
                 <% = item.ImagenUrl %>                
+            </td>
+            <td>
+                <!-- <asp:Button Text="Suma un producto igual" runat="server" /> -->
             </td>
         </tr>
         <%} %>
