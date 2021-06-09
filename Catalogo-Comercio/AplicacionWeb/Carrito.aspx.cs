@@ -21,7 +21,6 @@ namespace AplicacionWeb
             if (!IsPostBack)
             {
 
-<<<<<<< Updated upstream
                 if (Request.QueryString["Id"] != null)
                 {
 
@@ -30,11 +29,6 @@ namespace AplicacionWeb
                         List<Articulo> listaOriginal = (List<Articulo>)Session["listaSeleccionado"];
                         carrito.Add(listaOriginal.Find(x => x.Id.ToString() == Request.QueryString["Id"]));
                     }
-=======
-                List<Articulo> listas = (List<Articulo>)Session["listaSeleccionado"];
-                if (Request.QueryString["id"] != null) {//desarrollar if en caso de que el el querystring este vacio 
-                int id = int.Parse(Request.QueryString["id"]);
->>>>>>> Stashed changes
 
 
                 }
