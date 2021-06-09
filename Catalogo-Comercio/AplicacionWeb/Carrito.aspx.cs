@@ -20,13 +20,14 @@ namespace AplicacionWeb
             if (carrito == null)//Si carrito es null creo la lista, sino voy a trabajar con la lista de la session
                 carrito = new List<Articulo>();
 
-            if(Request.QueryString["id"] != null )
-            { 
-                if(carrito.Find(x=> x.Id.ToString() == Request.QueryString["id"]) == null)
+            if (Request.QueryString["Id"] != null)
+            {
+                if (carrito.Find(x => x.Id.ToString() == Request.QueryString["Id"]) == null)
                 {
-                List<Articulo> listaOriginal = (List<Articulo>)Session["listaSeleccionado"];
-                carrito.Add(listaOriginal.Find(x => x.Id.ToString() == Request.QueryString["id"]));
+                    List<Articulo> listaOriginal = (List<Articulo>)Session["listaSeleccionado"];
+                    carrito.Add(listaOriginal.Find(x => x.Id.ToString() == Request.QueryString["Id"]));
                 }
+
             }
             Session.Add("listaCarrito", carrito);
         }

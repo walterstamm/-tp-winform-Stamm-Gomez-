@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="AplicacionWeb.WebForm2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1> "Articulos en Carrito de Compras" </h1>
+    <h1> Articulos en Carrito de Compras </h1>
 
 
         
@@ -22,7 +22,7 @@
 
         <tr>
             <td>
-                <% = item.Nombre %>                
+                <%= item.Nombre %>                
             </td>
             <td>
                 <% = "$ " + item.Precio.ToString("0.00") %>

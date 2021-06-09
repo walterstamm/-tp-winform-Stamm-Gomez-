@@ -20,8 +20,7 @@ namespace AplicacionWeb
             {
                 listas = negocio.lista();// trae lo de la base de dato y lo carga ahi
 
-                //Session.Add("Nombress", "Exitos");
-                //Session["Nombress"] = "Victorias";
+
 
                 Session.Add("listaSeleccionado", listas);
 
