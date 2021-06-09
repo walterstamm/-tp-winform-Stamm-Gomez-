@@ -1,41 +1,48 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="AplicacionWeb.WebForm2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <h1>Articulos en Carrito de Compras </h1>
+    <h1>Mis Articulos </h1>
 
+    <div class="container">
 
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    <h5>PRODUCTO</h5>
+                </th>
+                <th>
+                    <h5>PRECIO</h5>
+                </th>
+                <th>
 
-    <table>
-        <tr>
-            <td>
-                <h5>PRODUCTO</h5>
-            </td>
-            <td>
-                <h5>PRECIO</h5>
-            </td>
-        </tr>
+                </th>
+            </tr>
 
-        <asp:Repeater runat="server" ID="repetidor">
-            <ItemTemplate>
+            <asp:Repeater runat="server" ID="repetidor">
+                <ItemTemplate>
 
-                <tr>
-                    <td>
-                        <%#Eval("Nombre")%>              
-                    </td>
-                    <td>
-                        <asp:Button Text="Elimnar" CssClass="btn btn-primary" ID="btnEliminar" OnClick="btnEliminar_Click" CommandArgument='<%#Eval("Id")%>' runat="server" />
-                    </td>
+                    <tr>
+                        <td>
+                            <%#Eval("Nombre")%>              
+                        </td>
+                        <td>
+                            <%#Eval("Precio")%>
+                        </td>
+                        <%# Eval("cantidadArticulos")%>
+                        <td>
+                            <asp:Button Text="Elimnar" CssClass="btn btn-primary" ID="btnEliminar" OnClick="btnEliminar_Click" CommandArgument='<%#Eval("Id")%>' runat="server" />
+                        </td>
 
-                </tr>
-            </ItemTemplate>
-        </asp:Repeater>
-    </table>
+                    </tr>
+                </ItemTemplate>
+            </asp:Repeater>
+        </table>
 
-
+    </div>
     <br />
     <br />
 
-    <asp:Button Text="Página Producto" ID="btnAgregarArticulos" OnClick="btnAgregarArticulos_Click" runat="server" />
+    <asp:Button Text="Ver mas Productos" ID="btnAgregarArticulos" OnClick="btnAgregarArticulos_Click" runat="server" />
     <!--OnClick="btnAgregarArticulos_Click" -->
 
 

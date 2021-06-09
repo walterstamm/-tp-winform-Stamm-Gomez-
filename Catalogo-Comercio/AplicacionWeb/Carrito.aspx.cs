@@ -28,11 +28,10 @@ namespace AplicacionWeb
                     {
                         List<Articulo> listaOriginal = (List<Articulo>)Session["listaSeleccionado"];
                         carrito.Add(listaOriginal.Find(x => x.Id.ToString() == Request.QueryString["Id"]));
+
                     }
 
-
                 }
-
                 repetidor.DataSource = carrito;
                 repetidor.DataBind();
 
