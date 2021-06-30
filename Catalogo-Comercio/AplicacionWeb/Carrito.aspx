@@ -28,7 +28,6 @@
                         <td>
                             <%#Eval("Precio")%>
                         </td>
-                        <%# Eval("cantidadArticulos")%>
                         <td>
                             <asp:Button Text="Elimnar" CssClass="btn btn-primary" ID="btnEliminar" OnClick="btnEliminar_Click" CommandArgument='<%#Eval("Id")%>' runat="server" />
                         </td>
